@@ -3,6 +3,7 @@ import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
 import mkcert from 'vite-plugin-mkcert';
 
+// Change this to your local domain
 const host = 'ritin.test';
 
 export default defineConfig({
