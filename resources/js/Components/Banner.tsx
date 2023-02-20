@@ -18,9 +18,9 @@ export default function Banner() {
             'bg-red-700': style == 'danger',
           })}
         >
-          <div className="max-w-screen-xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between flex-wrap">
-              <div className="w-0 flex-1 flex items-center min-w-0">
+          <div className="max-w-screen-xl px-3 py-2 mx-auto sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center justify-between">
+              <div className="flex items-center flex-1 w-0 min-w-0">
                 <span
                   className={classNames('flex p-2 rounded-lg', {
                     'bg-indigo-600': style == 'success',
@@ -32,7 +32,7 @@ export default function Banner() {
                       case 'success':
                         return (
                           <svg
-                            className="h-5 w-5 text-white"
+                            className="w-5 h-5 text-white"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -49,7 +49,7 @@ export default function Banner() {
                       case 'danger':
                         return (
                           <svg
-                            className="h-5 w-5 text-white"
+                            className="w-5 h-5 text-white"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ export default function Banner() {
                   })()}
                 </span>
 
-                <p className="ml-3 font-medium text-sm text-white truncate">
+                <p className="ml-3 text-sm font-medium text-white truncate">
                   {message}
                 </p>
               </div>
@@ -92,7 +92,7 @@ export default function Banner() {
                   }}
                 >
                   <svg
-                    className="h-5 w-5 text-white"
+                    className="w-5 h-5 text-white"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"

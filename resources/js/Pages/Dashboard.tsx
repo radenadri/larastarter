@@ -1,20 +1,31 @@
 import React from 'react';
 import Welcome from '@/Components/Welcome';
 import AppLayout from '@/Layouts/AppLayout';
+import useRoute from '@/Hooks/useRoute';
+
+import { Button } from '@/Components/radix/button';
+import { InertiaLink } from '@inertiajs/inertia-react';
 
 export default function Dashboard() {
+  const route = useRoute();
+
   return (
     <AppLayout
       title="Dashboard"
       renderHeader={() => (
-        <h2 className="font-semibold text-xl text-gray-800 leading-tight">
-          Dashboard
-        </h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-xl font-semibold leading-tight text-gray-800">
+            Dashboard
+          </h2>
+          <InertiaLink href={route('profile.show')}>
+            <Button>Open Profile</Button>
+          </InertiaLink>
+        </div>
       )}
     >
       <div className="py-12">
-        <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-          <div className="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="overflow-hidden bg-white shadow-xl sm:rounded-lg">
             <Welcome />
           </div>
         </div>
