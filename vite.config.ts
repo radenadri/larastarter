@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
+import mkcert from 'vite-plugin-mkcert';
+
+const host = 'ritin.test';
 
 export default defineConfig({
   plugins: [
@@ -10,6 +13,7 @@ export default defineConfig({
       refresh: true,
     }),
     react(),
+    mkcert(),
   ],
   resolve: {
     alias: {
@@ -18,5 +22,10 @@ export default defineConfig({
   },
   ssr: {
     noExternal: ['@inertiajs/server'],
+  },
+  server: {
+    host,
+    hmr: { host },
+    https: true,
   },
 });
