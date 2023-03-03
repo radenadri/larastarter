@@ -25,7 +25,7 @@
     "vite": "^4.1.4"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.11",
+    "@headlessui/react": "^1.7.12",
     "@inertiajs/inertia": "^0.11.1",
     "@inertiajs/inertia-react": "^0.8.1",
     "@inertiajs/progress": "^0.2.7",
